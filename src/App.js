@@ -54,12 +54,22 @@ function App() {
     );
   };
 
+  const addNewTask = (newTaskContent) => {
+    setTasks([
+      ...tasks,
+      {
+        content: newTaskContent,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+      },
+    ]);
+  };
+
   return (
     <main className="main">
       <h1 className="main__header">Lista zadań</h1>
 
       <Group title="Dodaj nowe zadanie">
-        <Form />
+        <Form addNewTask={addNewTask} />
       </Group>
 
       <Group
