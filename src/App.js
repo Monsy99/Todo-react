@@ -22,15 +22,17 @@ function App() {
   const [doneTasksHidden, setDoneTasksHidden] = useState(false);
 
   const toggleTaskDone = (id) => {
-    return tasks.map((task) => {
-      if (task.id === id) {
-        return {
-          task,
-          done: !task.done,
-        };
-      }
-      return task;
-    });
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === id) {
+          return {
+            ...task,
+            done: !task.done,
+          };
+        }
+        return task;
+      })
+    );
   };
 
   return (

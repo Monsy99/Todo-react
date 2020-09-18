@@ -11,7 +11,10 @@ const Tasks = ({ tasks, doneTasksHidden, toggleTaskDone }) => {
           ${doneTasksHidden && task.done ? " task--hidden" : ""}
           ${task.done ? " task--done" : ""}`}
         >
-          <button className={`task__doneButton`} onClick={() => toggleTaskDone}>
+          <button
+            className={`task__doneButton`}
+            onClick={() => toggleTaskDone(task.id)}
+          >
             ✔
           </button>
           <p className={`task__content`}>{task.content}</p>
