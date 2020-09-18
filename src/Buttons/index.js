@@ -15,7 +15,7 @@ const Buttons = ({ tasks, setDoneTasksHidden, doneTasksHidden }) => {
         </button>
 
         <button
-          disabled={tasks.find((task) => !task.done)}
+          disabled={tasks.every((task) => task.done)}
           className="buttons__functionButton"
         >
           Ukończ wszystkie
