@@ -8,14 +8,13 @@ const Buttons = (props) => {
     else{
     return <div className={`buttons`}>
         <button className="buttons__functionButton">
-        {props.doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}
+            {props.doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}
         </button>
         <button {...props.tasks.find((task) => (!task.done ? "" : "disabled"))} className="buttons__functionButton">
-        Ukończ wszystkie
+            Ukończ wszystkie
         </button>
         </div>
     }
 }
-
 
 export default Buttons;

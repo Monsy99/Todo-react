@@ -24,14 +24,18 @@ function App() {
         <main className="main">
             <h1 className="main__header">Lista zadań</h1>
             
-            <Group title="Dodaj nowe zadanie">
+            <Group 
+            title="Dodaj nowe zadanie"
+            >
                 <Form/>
             </Group>
 
-            <Group title="Lista zadań" additionalElements={<Buttons tasks={tasks} doneTasksHidden={doneTasksHidden}/>}>
+            <Group 
+            title="Lista zadań" 
+            additionalElements={<Buttons tasks={tasks} doneTasksHidden={doneTasksHidden}/>}
+            >
                 <Tasks tasks={tasks} doneTasksHidden={doneTasksHidden} />
             </Group>
-
         </main>
     );
 }
