@@ -1,27 +1,26 @@
-
 .buttons {
-    padding: 20px;
+  padding: 20px;
 }
 
 .buttons__functionButton {
-    color: teal;
-    background: none;
-    border: none;
-    font-size: 18px;
-    transition: color 0.3s ease-in;
+  color: teal;
+  background: none;
+  border: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in;
 }
 
 .buttons__functionButton:hover {
-    color: rgb(11, 155, 155);
-    cursor: pointer;
+  color: rgb(11, 155, 155);
+  cursor: pointer;
 }
 
 .buttons__functionButton:disabled {
-    color: #ccc
+  color: #ccc;
 }
-@media(max-width:700px) {
-    .buttons__functionButton {
-        margin-top: 20px;
-        margin-left: 0;
-    }
+@media (max-width: 700px) {
+  .buttons__functionButton {
+    margin-top: 20px;
+    margin-left: 0;
+  }
 }
