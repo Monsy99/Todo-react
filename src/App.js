@@ -37,9 +37,20 @@ function App() {
 
   const removeTask = (id) => {
     setTasks(
+      // this filter function checks if the task.id matches the given id and returns
+      // false to filter function which removes it from tasks array
       tasks.filter((task) => {
         return task.id === id ? false : true;
       })
+    );
+  };
+
+  const setAllTasksDone = () => {
+    setTasks(
+      tasks.map((task) => ({
+        ...task,
+        done: true,
+      }))
     );
   };
 
@@ -58,6 +69,7 @@ function App() {
             tasks={tasks}
             doneTasksHidden={doneTasksHidden}
             setDoneTasksHidden={setDoneTasksHidden}
+            setAllTasksDone={setAllTasksDone}
           />
         }
       >
