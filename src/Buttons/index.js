@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import { ButtonsContainer, Button } from "./styledButtons";
 
 const Buttons = ({
   tasks,
@@ -11,22 +11,18 @@ const Buttons = ({
     return null;
   } else {
     return (
-      <div className={`buttons`}>
-        <button
-          className="buttons__functionButton"
-          onClick={() => setDoneTasksHidden(!doneTasksHidden)}
-        >
+      <ButtonsContainer>
+        <Button onClick={() => setDoneTasksHidden(!doneTasksHidden)}>
           {doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}
-        </button>
+        </Button>
 
-        <button
+        <Button
           disabled={tasks.every((task) => task.done)}
-          className="buttons__functionButton"
           onClick={setAllTasksDone}
         >
           Ukończ wszystkie
-        </button>
-      </div>
+        </Button>
+      </ButtonsContainer>
     );
   }
 };

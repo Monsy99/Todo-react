@@ -1,15 +1,15 @@
 import React from "react";
-import "./style.css";
+import { StyledGroup, Wrapper, SubHeader } from "./styledGroup.js";
 
 const Group = (props) => (
-  <div className="group">
-    <div className="group__wrapper">
-      <h2 className="group__subHeader">{props.title}</h2>
+  <StyledGroup>
+    <Wrapper className="group__wrapper">
+      <SubHeader className="group__subHeader">{props.title}</SubHeader>
       {props.additionalElements}
-    </div>
+    </Wrapper>
     <hr></hr>
     {props.children}
-  </div>
+  </StyledGroup>
 );
 
 export default Group;
