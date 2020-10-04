@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -6,7 +6,25 @@ import Group from "./Group";
 import "./style.css";
 
 function App() {
-  const [tasks, setTasks] = useState([
+  const useLocalStorageItem = (keyName, initialValue) => {
+    const getInitialValue = () => {
+      if (localStorage.getItem(keyName) !== null) {
+        return JSON.parse(localStorage.getItem(keyName));
+      } else {
+        return initialValue;
+      }
+    };
+    const [item, setItem] = useState(getInitialValue);
+    localStorage.setItem(keyName, JSON.stringify(item));
+
+    useEffect(() => {
+      localStorage.setItem(keyName, JSON.stringify(item));
+    }, [item]);
+
+    return [item, setItem];
+  };
+
+  const [tasks, setTasks] = useLocalStorageItem("tasks", [
     {
       id: 1,
       content: "zjeść ciastko",
