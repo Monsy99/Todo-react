@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const TaskList = styled.div`
+const TasksList = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -71,4 +71,4 @@ const DeleteButton = styled.button`
   }
 `;
 
-export { TaskList, Task, DoneButton, TaskContent, DeleteButton };
+export { TasksList, Task, DoneButton, TaskContent, DeleteButton };
