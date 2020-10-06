@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,iBAGE,qBACF,CAEA,KACE,qBAAsB,CACtB,+BACF","file":"main.742305a2.chunk.css","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #ddd;\n  font-family: \"Roboto\", sans-serif;\n}\n"]}
